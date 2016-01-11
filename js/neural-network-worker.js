@@ -11,7 +11,7 @@ class NeuralNetworkWorker {
     let z = ((n + l) * secondLayerSize + 2) / (n * l + 2);
 
     do {
-      this.teachNeuroWeb(vectors, recirculationNeuralNetwork);
+      this.teachNeuroNetwork(vectors, recirculationNeuralNetwork);
       currentError = this.countCurrentError(vectors, recirculationNeuralNetwork);
       iterations++;
       console.log(iterations, currentError);
@@ -27,7 +27,7 @@ class NeuralNetworkWorker {
       vectors: vectors
     });
   }
-  teachNeuroWeb(vectors, recirculationNeuralNetwork) {
+  teachNeuroNetwork(vectors, recirculationNeuralNetwork) {
     vectors.forEach((vector) => vector.forEach((element) => recirculationNeuralNetwork.step(element)));
   }
   countCurrentError(vectors, recirculationNeuralNetwork) {
