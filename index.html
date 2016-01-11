@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    </head>
+    <body>
+        <div>
+            <input id="image-chooser" type="file" accept="image/*">
+            <label style="display: block">Sub width:
+                <input type="number" id="sub-width" value="5">
+            </label>
+            <label style="display: block">Sub height:
+                <input type="number" id="sub-height" value="5">
+            </label>
+            <label style="display: block">Second layer size:
+                <input type="number" id="second-layer-size" value="32">
+            </label>
+            <label style="display: block">Error:
+                <input type="number" id="error" value="100">
+            </label>
+            <input type="submit" style="display: block" id="start" value="Start">
+            <div id="width"></div>
+            <div id="height"></div>
+            <canvas id="basic" style="display: none"></canvas>
+            <canvas id="input"></canvas>
+            <canvas id="output"></canvas>
+        </div>
+
+        <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js" ></script>
+        <script type="text/javascript" src="js/image-converter.js" ></script>
+        <script type="text/javascript" src="./js/index.js" ></script>
+    </body>
+</html>
